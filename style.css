@@ -53,12 +53,16 @@ img[alt="illustration-article"] {
 }
 
 header {
-  p {
+  p.figtree-900 {
     background-color: var(--yellow);
     max-width: fit-content;
     padding: 0.25rem 1rem;
     border-radius: 5px;
     margin: 1.5rem 0 0.75rem 0;
+  }
+
+  p.figtree-500 {
+    margin: 0;
   }
 }
 
