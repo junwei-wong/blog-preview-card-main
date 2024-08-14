@@ -1,8 +1,10 @@
 :root {
+  /* declaring css variables */
   --yellow: hsl(47, 88%, 63%);
   --white: hsl(0, 0%, 100%);
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
+  --border-radius: 20px;
 }
 
 @font-face {
@@ -10,17 +12,80 @@
   src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
 }
 
+/* using variable font weight */
 .figtree-500 {
   font-family: Figtree;
   font-variation-settings: 'wght' 500;
 }
 
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.figtree-900 {
+  font-family: Figtree;
+  font-variation-settings: 'wght' 900;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+body {
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Figtree;
+  font-size: clamp(0.625rem, calc(0.625rem + 1vmin), 4rem);
+}
+
+article {
+  background-color: var(--white);
+  margin: 1rem;
+  max-width: 30rem;
+  padding: 1.5rem;
+  outline: solid;
+  border-radius: var(--border-radius);
+  box-shadow: 11px 8px 0px 0px black;
+
+  @media screen and (min-width: 378px) {
+    margin: auto;
+  }
+}
+
+img[alt="illustration-article"] {
+  border-radius: 15px;
+  min-width: 100%;
+}
+
+header {
+  p {
+    background-color: var(--yellow);
+    max-width: fit-content;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    margin: 1.5rem 0 0.75rem 0;
+  }
+}
+
+p.figtree-500 {
+  color: var(--gray-500);
+  margin: 1.25rem 0;
+}
+
+footer.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  img {
+    max-height: 2rem;
+    max-width: 2rem;
+  }
+
+  p {
+    margin: auto 0.5rem;
+  }
+}
+
+footer.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }
