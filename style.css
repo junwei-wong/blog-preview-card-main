@@ -29,13 +29,13 @@ body {
   flex-direction: column;
   justify-content: center;
   font-family: Figtree;
-  font-size: clamp(0.625rem, calc(0.625rem + 1vmin), 4rem);
+  font-size: clamp(0.5rem, calc(0.625rem + 1vmin), 1em);
 }
 
 article {
   background-color: var(--white);
   margin: 1rem;
-  max-width: 30rem;
+  max-width: 24rem;
   padding: 1.5rem;
   outline: solid;
   border-radius: var(--border-radius);
@@ -48,7 +48,7 @@ article {
 
 img[alt="illustration-article"] {
   border-radius: 15px;
-  min-width: 100%;
+  object-fit: contain;
 }
 
 header {
